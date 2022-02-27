@@ -15,7 +15,7 @@ public struct EasinessFactor {
     public private(set) var minValue: Double
     public private(set) var maxValue: Double
 
-    public init(value: Double, minValue: Double = 1.1, maxValue: Double = 2.5) {
+    public init(value: Double, minValue: Double = 1.3, maxValue: Double = 2.5) {
         self.value = value.restricted(lower: minValue, upper: maxValue)
         self.minValue = minValue
         self.maxValue = maxValue
