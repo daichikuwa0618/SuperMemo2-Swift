@@ -22,4 +22,8 @@ public enum ResponseGrade: Int {
     /// perfect response.
     case perfect
 
+    var quality: Int {
+        self.rawValue
+    }
+
 }
