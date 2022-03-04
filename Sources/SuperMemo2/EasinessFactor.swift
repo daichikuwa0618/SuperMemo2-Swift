@@ -21,4 +21,10 @@ public struct EasinessFactor {
         self.maxValue = maxValue
     }
 
+    public mutating func moveOnNext(with response: ResponseGrade) {
+        let difficulty = Double(5 - response.quality)
+        let newValue = value + (0.1 - difficulty * (0.08 + difficulty * 0.02))
+        value = newValue.restricted(lower: minValue, upper: maxValue)
+    }
+
 }
